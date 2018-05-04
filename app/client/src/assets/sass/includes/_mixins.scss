@@ -1,0 +1,35 @@
+//
+// Mixins
+// ------------------------------------------------------------------
+
+    //
+    // Clearfix
+    // --------------------------------------------------------------
+        @mixin clearfix () {
+            &:before,
+            &:after {
+                content: " ";
+                display: table;
+            }
+            &:after {
+                clear: both;
+            }
+        }
+
+    //
+    // Inline Block
+    // --------------------------------------------------------------
+        @mixin inlineBlock () {
+            display: inline-block;
+            vertical-align: top;
+            zoom: 1;
+            *display: inline;
+        }
+
+    //
+    // Transition
+    // --------------------------------------------------------------
+        @mixin transition ($transition: all 0.3s ease-out) {
+            -webkit-transition: $transition;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+                    transition: $transition;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+        }

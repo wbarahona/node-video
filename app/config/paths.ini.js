@@ -31,46 +31,44 @@ paths.routes.users = `${ paths.routes.root }/user`;
 //
 // ALL ROUTES FOR CLIENTS GO HERE
 // ---------------------------------------------------------------------------------------------
-paths.client = {
-    dev: {
-        client: {
-            scripts: './app/client/src/assets/scripts',
-            fonts: './app/client/src/assets/fonts',
-            images: './app/client/src/assets/img',
-            styles: './app/client/src/assets/sass',
-            hbs: {
-                root: './app/client/src/assets/templates',
-                partials: './app/client/src/assets/templates/partials'
-            },
-            root: './app/client/src'
+paths.dev = {
+    client: {
+        scripts: './app/client/src/assets/scripts',
+        fonts: './app/client/src/assets/fonts',
+        images: './app/client/src/assets/img',
+        styles: './app/client/src/assets/sass',
+        hbs: {
+            root: './app/client/src/assets/templates',
+            partials: './app/client/src/assets/templates/partials'
         },
-        admin: {
-            scripts: './app/admin/src/assets/scripts',
-            fonts: './app/admin/src/assets/fonts',
-            images: './app/admin/src/assets/img',
-            styles: './app/admin/src/assets/sass',
-            hbs: {
-                root: './app/admin/src/assets/templates',
-                partials: './app/admin/src/assets/templates/partials'
-            },
-            root: './app/admin/src'
-        }
+        root: './app/client/src'
     },
-    dist: {
-        client: {
-            scripts: './app/client/dist/assets/scripts',
-            fonts: './app/client/dist/assets/fonts',
-            images: './app/client/dist/assets/img',
-            styles: './app/client/dist/assets/css',
-            root: './app/client/dist'
+    admin: {
+        scripts: './app/admin/src/assets/scripts',
+        fonts: './app/admin/src/assets/fonts',
+        images: './app/admin/src/assets/img',
+        styles: './app/admin/src/assets/sass',
+        hbs: {
+            root: './app/admin/src/assets/templates',
+            partials: './app/admin/src/assets/templates/partials'
         },
-        admin: {
-            scripts: './app/admin/dist/assets/scripts',
-            fonts: './app/admin/dist/assets/fonts',
-            images: './app/admin/dist/assets/img',
-            styles: './app/admin/dist/assets/css',
-            root: './app/admin/dist'
-        }
+        root: './app/admin/src'
+    }
+};
+paths.dist = {
+    client: {
+        scripts: './app/client/dist/assets/scripts',
+        fonts: './app/client/dist/assets/fonts',
+        images: './app/client/dist/assets/img',
+        styles: './app/client/dist/assets/css',
+        root: './app/client/dist'
+    },
+    admin: {
+        scripts: './app/admin/dist/assets/scripts',
+        fonts: './app/admin/dist/assets/fonts',
+        images: './app/admin/dist/assets/img',
+        styles: './app/admin/dist/assets/css',
+        root: './app/admin/dist'
     }
 };
 

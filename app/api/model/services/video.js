@@ -5,7 +5,7 @@ import Promise from 'promise';
 import fs from 'fs';
 
 const res = './public/uploads';
-const output = './public/dist';
+const output = './app/client/dist/public';
 const ffmpegpath = ffmpeginstaller.path;
 const ffprobepath = ffprobeinstaller.path;
 
@@ -101,7 +101,7 @@ ThisModule.chopVideo = async (filename, ext, videoLen, duration) => {
 
         responsePieces = piecesPromise;
     } catch (err) {
-        response = 'there was an error!';
+        response.message = 'there was an error!';
         console.log(err);
     }
 

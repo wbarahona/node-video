@@ -1,0 +1,21 @@
+//
+// All Styles Includes here, no selector shall be here, use includes/theme
+// to customize styles, these all are meant to provide a bootstrap for
+// your website.
+// -----------------------------------------------------------------------
+    @import 'includes/resets';
+    @import 'includes/variables';
+    @import 'includes/mixins';
+    @import 'includes/colors';
+    @import 'includes/utilities';
+
+//
+// Load Sass/Scss libraries
+// ------------------------------------------------------------------------
+    
+
+//
+// Load your custom styles in theme
+// Feel free to override styles imported on inclusions
+// ------------------------------------------------------------------------
+    @import 'themes/theme';

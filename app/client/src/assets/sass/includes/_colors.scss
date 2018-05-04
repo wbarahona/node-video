@@ -1,0 +1,111 @@
+//
+// Color Function
+// For Flat UI Color Palette
+// --------------------------------------------------------------------------
+    $colors: (
+        turquose: (
+            base:   $_color-base-turquoise,
+            light:  lighten($_color-base-turquoise, 10%),
+            dark:    darken($_color-base-turquoise, 10%)
+        ),
+        greensea: (
+            base: $_color-base-greensea,
+            light: lighten($_color-base-greensea, 10%),
+            dark:   darken($_color-base-greensea, 10%)
+        ),
+        emerald: (
+            base: $_color-base-emerald,
+            light: lighten($_color-base-emerald, 10%),
+            dark:   darken($_color-base-emerald, 10%)
+        ),
+        nephritis: (
+            base: $_color-base-nephritis,
+            light: lighten($_color-base-nephritis, 10%),
+            dark:   darken($_color-base-nephritis, 10%)
+        ),
+        peterriver: (
+            base: $_color-base-peterriver,
+            light: lighten($_color-base-peterriver, 10%),
+            dark:   darken($_color-base-peterriver, 10%)
+        ),
+        belizehole: (
+            base: $_color-base-belizehole,
+            light: lighten($_color-base-belizehole, 10%),
+            dark:   darken($_color-base-belizehole, 10%)
+        ),
+        amethyst: (
+            base: $_color-base-amethyst,
+            light: lighten($_color-base-amethyst, 10%),
+            dark:   darken($_color-base-amethyst, 10%)
+        ),
+        wisteria: (
+            base: $_color-base-wisteria,
+            light: lighten($_color-base-wisteria, 10%),
+            dark:   darken($_color-base-wisteria, 10%)
+        ),
+        wetasphalt: (
+            base: $_color-base-wetasphalt,
+            light: lighten($_color-base-wetasphalt, 10%),
+            dark:   darken($_color-base-wetasphalt, 10%)
+        ),
+        midnightblue: (
+            base: $_color-base-midnightblue,
+            light: lighten($_color-base-midnightblue, 10%),
+            dark:   darken($_color-base-midnightblue, 10%)
+        ),
+        sunflower: (
+            base: $_color-base-sunflower,
+            light: lighten($_color-base-sunflower, 10%),
+            dark:   darken($_color-base-sunflower, 10%)
+        ),
+        orange: (
+            base: $_color-base-orange,
+            light: lighten($_color-base-orange, 10%),
+            dark:   darken($_color-base-orange, 10%)
+        ),
+        carrot: (
+            base: $_color-base-carrot,
+            light: lighten($_color-base-carrot, 10%),
+            dark:   darken($_color-base-carrot, 10%)
+        ),
+        pumpkin: (
+            base: $_color-base-pumpkin,
+            light: lighten($_color-base-pumpkin, 10%),
+            dark:   darken($_color-base-pumpkin, 10%)
+        ),
+        alizarin: (
+            base: $_color-base-alizarin,
+            light: lighten($_color-base-alizarin, 10%),
+            dark:   darken($_color-base-alizarin, 10%)
+        ),
+        pomegranate: (
+            base: $_color-base-pomegranate,
+            light: lighten($_color-base-pomegranate, 10%),
+            dark:   darken($_color-base-pomegranate, 10%)
+        ),
+        clouds: (
+            base: $_color-base-clouds,
+            light: lighten($_color-base-clouds, 10%),
+            dark:   darken($_color-base-clouds, 10%)
+        ),
+        silver: (
+            base: $_color-base-silver,
+            light: lighten($_color-base-silver, 10%),
+            dark:   darken($_color-base-silver, 10%)
+        ),
+        concrete: (
+            base: $_color-base-concrete,
+            light: lighten($_color-base-concrete, 10%),
+            dark:   darken($_color-base-concrete, 10%)
+        ),
+        asbestos: (
+            base: $_color-base-asbestos,
+            light: lighten($_color-base-asbestos, 10%),
+            dark:   darken($_color-base-asbestos, 10%)
+        )
+    );
+
+    // Palette function,
+    @function color($color, $tone: 'base') {
+        @return map-get(map-get($colors, $color), $tone);
+    }
