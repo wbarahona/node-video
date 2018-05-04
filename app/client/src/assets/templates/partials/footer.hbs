@@ -1,4 +1,21 @@
 <div class="overlay hidden">
     <p>Fetching your video and clipping it... hold on. <span><i>&#x26BD;</i></span></p>
 </div>
+{{!-- <script type="text/javascript">
+    window.captcharesp = '';
+    
+    function verifyCallback (response) {
+        console.log(response);
+        window.captcharesp = response;
+    }
+    function onloadCallback () {
+        grecaptcha.render('captchaDiv', {
+            'sitekey': '6LcnDg8TAAAAAL_jcmgzXPc-QCoa8SujFpmrzwJW',
+            'callback': verifyCallback,
+            'theme': 'dark'
+        });
+    }
+</script> --}}
+{{!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script> --}}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript" src="/assets/scripts/app.min.js"></script>

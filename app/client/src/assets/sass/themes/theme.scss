@@ -73,6 +73,21 @@ body {
         }
     }
 }
+.g-recaptcha > div {
+    margin: 0 auto;
+}
+.thumbnail-card {
+    margin-bottom: 1rem;
+}
+.card-body h5 {
+    font-weight: 600;
+}
+.card-body p {
+    height: 3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 @keyframes spining {
     from {

@@ -8,14 +8,34 @@
             <form>
                 <div class="form-group">
                     <label for="youtubeurl">Youtube url:</label>
-                    <input type="text" class="form-control youtubeurl" id="youtubeurl" aria-describedby="youtubeUrlHelp" placeholder="https://www.youtube.com/watch?v=CTmYL1hzyts">
+                    <input type="text" class="form-control youtubeurl" id="youtubeurl" aria-describedby="youtubeUrlHelp" placeholder="Paste your youtube video url here...">
                     <small id="youtubeUrlHelp" class="form-text text-muted">Video has to be at least 30s long and less than 6 mins.</small>
                 </div>
-                <button type="button" class="btn btn-dark submit">Send!</button>
+                <br>
+                <br>
+                <div class="form-group">
+                    <label for="">Fill the captcha below:</label>
+                    <div class="form-control g-recaptcha" data-theme="dark" data-sitekey="6LcnDg8TAAAAAL_jcmgzXPc-QCoa8SujFpmrzwJW"></div>
+                    <small class="form-text text-muted">I just don't want my server spammed.</small>
+                </div>
+                <div class="row">
+                    <button type="button" class="col-sm-12 col-md-6 offset-md-3 btn btn-dark submit">Send!</button>
+                </div>
             </form>
         </div>
     </div>
-    <h2 class="hidden results-title">Clipping Results:</h2>
+    <h2 class="hidden results-title">Your clipping results are below, click them to save.</h2>
+    <div class="row">
+        <div class="col-sm-12 col-md-6 offset-md-3">
+            <div class="hidden card thumbnail-card">
+                <img class="card-img-top" src="" alt="">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
     <ul class="list-group hidden links">
     </ul>
 </main>

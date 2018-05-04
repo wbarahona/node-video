@@ -69,7 +69,7 @@ ThisModule.getytinfo = async (url) => {
                 response.message = 'Video info retrieved successfully';
                 response.content = {
                     id: info.id,
-                    title: info.id,
+                    title: info.title,
                     url: info.url,
                     thumbnail: info.thumbnail,
                     description: info.description,

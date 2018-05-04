@@ -10,7 +10,8 @@
     "$": false,
     "console": false,
     "__basedir": false,
-    "handlebars": false
+    "handlebars": false,
+    "grecaptcha": false
   },
   "parserOptions": {
     "ecmaVersion": 6,

@@ -38,7 +38,7 @@ ItemsHandler.youtube = async (request, h) => {
 
     try {
         const ytinfoResponse =  await YoutubeService.getytinfo(url);
-        const { durationraw } = ytinfoResponse.content;
+        const { id, title, thumbnail, description, filename, formatid, durationraw } = ytinfoResponse.content;
 
         if (ytinfoResponse.code === 1 && durationraw > 34 && durationraw < 360) {
             const youtubeResponse = await YoutubeService.getytvideo(url);
@@ -49,7 +49,7 @@ ItemsHandler.youtube = async (request, h) => {
                 statusCode = (videoResponse.code === 1) ? 200 : 500;
                 code = videoResponse.code;
                 message = videoResponse.message;
-                content = { piecesResponses: videoResponse.content, id: youtubeResponse.content.videoname };
+                content = { piecesResponses: videoResponse.content, id: youtubeResponse.content.videoname, videoinfo: { id, title, thumbnail, description, filename, formatid, durationraw } };
             } else {
                 statusCode = (youtubeResponse.code === 1) ? 200 : 500;
                 code = youtubeResponse.code;
