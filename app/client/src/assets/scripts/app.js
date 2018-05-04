@@ -55,7 +55,7 @@ $submit.on('click', () => {
             },
             error: (err) => {
                 console.error(err);
-                showToast('danger', '&#x26D4; Hull is wreck cap\'n! Abandon ship!!!');
+                showToast('danger', `&#x26D4; Hull is wreck cap\'n! Abandon ship!!! ${ err.responseJSON.message }`);
                 $loading.addClass('hidden');
             }
         });
