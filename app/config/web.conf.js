@@ -48,10 +48,11 @@ module.exports = {
             ],
             twitterapps: '',
             google: {
-                analytics: 'UA-45891459-8',
+                analytics: 'UA-1235486-9',
                 public: {
                     apikey: ''
                 },
+                captcha: '6LcnDg8TAAAAAL_jcmgzXPc-QCoa8SujFpmrzwJW',
                 oauth: [
                     {clientid: '', emailaddress: '', clientsecret: ''},
                     {clientid: '', emailaddress: '', clientsecret: ''}

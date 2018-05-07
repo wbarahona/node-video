@@ -35,7 +35,6 @@ $submit.on('click', () => {
             data: { 'url': $yturl.val() },
             dataType: 'json',
             success: (data) => {
-                // const data = {'statusCode': 200, 'code': 1, 'message': 'Done processing videos!', 'content': {'piecesResponses': ['Video processed', 'Video processed', 'Video processed', 'Video processed'], 'id': 'qCZQyxac51U3Z0juGys5', 'videoinfo': {'id': 'DmP1ier3R30', 'title': 'REJECTION EXPERIMENT: GUYS VS GIRLS', 'thumbnail': 'https://i.ytimg.com/vi/DmP1ier3R30/maxresdefault.jpg', 'description': 'How girls reject guys versus how guys reject girls.\nSUBSCRIBE ► https://youtube.com/user/whatever?sub_confirmation=1\nMERCHANDISE ► https://amazon.com/shop/whatever\n\nBEHIND THE SCENES ► http://www.youtube.com/user/nevermind?sub_confirmation=1\n\n★FOLLOW ME ON SOCIAL MEDIA★\nFACEBOOK ► http://facebook.com/whatever\nTWITTER (@whatever) ► http://twitter.com/whatever\nINSTAGRAM (@whatever) ► http://instagram.com/whatever\n\n★MY EQUIPMENT★\nCAMERA (1): http://amzn.to/2D5Afuz\nCAMERA (2): http://amzn.to/2AU20QZ\nCAMERA (3): http://amzn.to/2mnLJhK\nMICROPHONE: http://amzn.to/1UmEaC8\nDRONE: http://amzn.to/2Fvr6ZT\n\nPATREON ► http://patreon.com/whatever', 'filename': 'REJECTION EXPERIMENT - GUYS VS GIRLS-DmP1ier3R30.mp4', 'formatid': '22', 'durationraw': 105}}};
 
                 if (data.code === 1) {
                     const piecesLen = data.content.piecesResponses.length;
@@ -61,11 +60,20 @@ $submit.on('click', () => {
                     $loading.addClass('hidden');
                 } else {
                     showToast('warning', data.message);
+                    $loading.addClass('hidden');
                 }
             },
             error: (err) => {
                 console.error(err);
-                showToast('danger', `&#x26D4; Hull is wreck cap\'n! Abandon ship!!! ${ err.responseJSON.message }`);
+                let msg = '';
+
+                if (typeof err.responseJSON !== 'undefined') {
+                    msg = err.responseJSON.message;
+                } else {
+                    msg = 'Unknown error! :/';
+                }
+
+                showToast('danger', `&#x26D4; Hull is wreck cap\'n! Abandon ship!!! ${ msg }`);
                 $loading.addClass('hidden');
             }
         });
